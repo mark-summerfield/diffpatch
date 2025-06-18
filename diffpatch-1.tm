@@ -1,6 +1,6 @@
 # Copyright © 2025 Mark Summerfield. All rights reserved.
 
-# returns a delta (a list of lists) which can be passed to patch
+# returns a delta (a list of lists) which can be passed to lcs_patch
 proc lcs_diff {old_lst new_lst} {
     set lcs [::struct::list longestCommonSubsequence $old_lst $new_lst]
     set delta [list]
@@ -18,7 +18,7 @@ proc lcs_diff {old_lst new_lst} {
     return $delta
 }
 
-# given old_lst and delta reconstructs and returns new_lst
+# given old_lst and and lcs_diff delta reconstructs and returns new_lst
 proc lcs_patch {old_lst delta} {
     set new_lst [lmap x $old_lst {expr {$x}}]
     foreach d $delta {
