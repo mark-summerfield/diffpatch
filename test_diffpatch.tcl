@@ -7,7 +7,7 @@ package require diffpatch
 package require struct::list 1
 
 proc test1 {} {
-    set debug $::argc
+    set debug [expr {!$::argc}]
     lcs_check a $::ax $::ay $debug
     lcs_check b $::bx $::by $debug
     lcs_check c $::cx $::cy $debug
