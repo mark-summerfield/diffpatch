@@ -20,7 +20,7 @@ proc lcs_diff {old_lst new_lst} {
 
 # given old_lst and and lcs_diff delta reconstructs and returns new_lst
 proc lcs_patch {old_lst delta} {
-    set new_lst [lmap x $old_lst {expr {$x}}]
+    set new_lst $old_lst
     foreach d $delta {
         lassign $d what left right
         #puts "DEBUG what='$what' left='$left' right='$right'"
