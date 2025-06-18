@@ -18,7 +18,7 @@ proc lcs_check {name x y debug} {
     set delta [lcs_diff $x $y]
     set z [lcs_patch $x $delta]
     if {$debug} {
-        puts "${name} ######################"
+        puts "\n${name} ######################"
         puts "${name}x={$x}\n${name}y={$y}\ndelta={$delta}\n${name}z={$z}"
     }
     if {[struct::list equal $y $z]} {
