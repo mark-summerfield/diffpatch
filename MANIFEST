@@ -1,5 +1,5 @@
-diffpatch.tcl
-app-1.tm
+diffpatch-1.tm
+test_diffpatch.tcl
 
 st.sh
 
